@@ -12,17 +12,34 @@ HowTo es mi primer gran proyecto personal desarrollado en Android. Es una red so
 
 A continuación, se presentan algunas capturas de pantalla de la aplicación:
 
+
+
 ![Inicio de sesión](/assets/login.png)
+
 *Pantalla de inicio de sesión con diferentes opciones de login: Google, Facebook y Twitter.*
 
+___
+
+
 ![Página de inicio](/assets/inicio.png)
+
 *Página de inicio donde los usuarios pueden ver las guías más recientes y populares.*
 
+___
+
+
 ![Creación de guía](/assets/creacion_howto.png)
+
 *Interfaz intuitiva para la creación de guías, permitiendo a los usuarios agregar texto y imágenes.*
 
+___
+
+
 ![Visualización de guía](/assets/howto.png)
+
 *Interfaz intuitiva para la visualización de las guias con imagenes.*
+___
+
 
 ## Características principales
 
@@ -42,10 +59,8 @@ A continuación, se presentan algunas capturas de pantalla de la aplicación:
 
 ## Contacto
 
-Si tienes alguna pregunta o sugerencia sobre HowTo, no dudes en contactarme:
+Si tienes alguna pregunta sobre HowTo, no dudes en contactarme:
 
 - LinkedIn: [Christian Ruiz Castillero](https://www.linkedin.com/in/christian-ruiz-castillero/)
-
-¡Espero que disfrutes de la aplicación HowTo y encuentres útiles las guías compartidas por la comunidad!
 
 ---
