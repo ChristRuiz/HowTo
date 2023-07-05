@@ -1,6 +1,8 @@
 # HowTo
 
-![Logo de HowTo](/ruta/imagen_logo.png)
+<p align="center">
+  <img src="/assets/logo.png" />
+</p>
 
 ## Descripción
 
@@ -10,14 +12,17 @@ HowTo es mi primer gran proyecto personal desarrollado en Android. Es una red so
 
 A continuación, se presentan algunas capturas de pantalla de la aplicación:
 
-![Inicio de sesión](/ruta/captura_inicio_sesion.png)
+![Inicio de sesión](/assets/login.png)
 *Pantalla de inicio de sesión con diferentes opciones de login: Google, Facebook y Twitter.*
 
-![Página de inicio](/ruta/captura_pagina_inicio.png)
+![Página de inicio](/assets/inicio.png)
 *Página de inicio donde los usuarios pueden ver las guías más recientes y populares.*
 
-![Creación de guía](/ruta/captura_creacion_guia.png)
-*Interfaz intuitiva para la creación de guías, permitiendo a los usuarios agregar texto, imágenes y videos.*
+![Creación de guía](/assets/creacion_howto.png)
+*Interfaz intuitiva para la creación de guías, permitiendo a los usuarios agregar texto y imágenes.*
+
+![Visualización de guía](/assets/howto.png)
+*Interfaz intuitiva para la visualización de las guias con imagenes.*
 
 ## Características principales
 
