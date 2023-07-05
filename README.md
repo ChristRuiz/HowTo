@@ -39,7 +39,7 @@ A continuación, se presentan algunas capturas de pantalla de la aplicación:
 
 Si tienes alguna pregunta o sugerencia sobre HowTo, no dudes en contactarme:
 
-- LinkedIn: [Tu Nombre en LinkedIn](https://www.linkedin.com/in/christian-ruiz-castillero/)
+- LinkedIn: [Christian Ruiz Castillero](https://www.linkedin.com/in/christian-ruiz-castillero/)
 
 ¡Espero que disfrutes de la aplicación HowTo y encuentres útiles las guías compartidas por la comunidad!
 
