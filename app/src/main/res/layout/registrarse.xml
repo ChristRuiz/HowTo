@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo_login">
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="13"
+        android:layout_margin="20dp"
+        android:textColor="@color/white"
+        android:hint="Correo Electrónico"
+        android:fontFamily="@font/text_regular"
+        android:textColorHint="@color/white"
+        android:layout_above="@id/password"
+        android:layout_centerHorizontal="true"
+        android:drawableLeft="@drawable/ic_email_white_24dp"
+        android:padding="10dp"
+        android:background="@drawable/login_register_edittext"
+        android:drawablePadding="10dp"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="13"
+        android:layout_margin="20dp"
+        android:textColor="@color/white"
+        android:hint="Contraseña"
+        android:fontFamily="@font/text_regular"
+        android:textColorHint="@color/white"
+        android:layout_above="@id/confirmpassword"
+        android:layout_centerHorizontal="true"
+        android:drawableLeft="@drawable/ic_lock_white_24dp"
+        android:padding="10dp"
+        android:background="@drawable/login_register_edittext"
+        android:drawablePadding="10dp"
+        android:inputType="textPassword" />
+
+    <EditText
+        android:id="@+id/confirmpassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="13"
+        android:layout_margin="20dp"
+        android:textColor="@color/white"
+        android:hint="Confirmar Contraseña"
+        android:fontFamily="@font/text_regular"
+        android:textColorHint="@color/white"
+        android:layout_centerInParent="true"
+        android:drawableLeft="@drawable/ic_lock_white_24dp"
+        android:padding="10dp"
+        android:background="@drawable/login_register_edittext"
+        android:drawablePadding="10dp"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/registrarse"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Registrarse"
+        android:layout_margin="20dp"
+        android:layout_below="@id/confirmpassword"
+        android:background="@drawable/button"
+        android:textColor="#fff"
+        android:fontFamily="@font/title_bold"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/loguearse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¿Tienes ya cuenta? Inicia Sesion!"
+        android:layout_below="@id/registrarse"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/text_regular"
+        android:textColor="@color/white"/>
+
+</RelativeLayout>

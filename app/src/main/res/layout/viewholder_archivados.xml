@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/borde_blanco_listado_v3"
+    android:padding="20dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/foto_perfil_comentario"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/user"
+        app:civ_border_width="2dp"
+        app:civ_border_color="@color/white"/>
+
+    <TextView
+        android:id="@+id/nombre_completo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="2dp"
+        android:layout_toRightOf="@id/foto_perfil_comentario"
+        android:fontFamily="@font/title_regular"
+        android:text=".nombre_usuario"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/nombre_usuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nombre_completo"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="3dp"
+        android:layout_toRightOf="@id/foto_perfil_comentario"
+        android:fontFamily="@font/title_regular"
+        android:text=".@usuario"
+        android:textColor="@color/colorAccent" />
+
+    <TextView
+        android:id="@+id/titulo_howto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/white"
+        android:text="Titulo Howto"
+        android:fontFamily="@font/title_bold"
+        android:textSize="16sp"
+        android:layout_below="@id/nombre_completo"
+        android:layout_toRightOf="@id/foto_perfil_comentario"
+        android:padding="10dp"/>
+
+</RelativeLayout>

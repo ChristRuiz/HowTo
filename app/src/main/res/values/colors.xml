@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimaryDark">#0073FF</color>
+    <color name="colorPrimary">#3D8CFF</color>
+    <color name="colorAccent">#C5C5C5</color>
+    <color name="white">#fff</color>
+    <color name="blue_light">#D303F4EC</color>
+    <color name="blue_normal">#D303A9F4</color>
+    <color name="twitter">#00acee</color>
+    <color name="facebook">#3b5998</color>
+    <color name="fondo">#273C66</color>
+    <color name="fondo_oscuro">#1F2F50</color>
+    <color name="barra_notificaciones">#101829</color>
+    <color name="comentario_padre">#13223A</color>
+    <color name="like">#FA3939</color>
+    <color name="like2">#FF7373</color>
+</resources>

@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:id="@+id/scroll"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondo"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MostrarHowto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/fondo_oscuro"
+            android:theme="@style/AppThemeInside.AppBarOverlay">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:popupTheme="@style/AppThemeInside.PopupOverlay" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <RelativeLayout
+            android:id="@+id/vista"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            tools:showIn="@layout/barra_crear_howto">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/foto_perfil"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/user"
+
+                app:civ_border_color="@color/white"
+                app:civ_border_width="2dp" />
+
+            <TextView
+                android:id="@+id/nombre_completo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="2dp"
+                android:layout_toRightOf="@id/foto_perfil"
+                android:fontFamily="@font/title_regular"
+                android:text=".nombre_usuario"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/nombre_usuario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/nombre_completo"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="3dp"
+                android:layout_toRightOf="@id/foto_perfil"
+                android:fontFamily="@font/title_regular"
+                android:text=".@usuario"
+                android:textColor="@color/colorAccent" />
+
+            <TextView
+                android:id="@+id/titulo_howto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/foto_perfil"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/title_bold"
+                android:text="Titulo del Howto"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/descripcion_howto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/titulo_howto"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/text_regular"
+                android:text="Descripcion ampliada del howto"
+                android:textColor="@color/white" />
+
+            <ImageView
+                android:id="@+id/foto_howto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/descripcion_howto"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:adjustViewBounds="true"
+                android:maxWidth="250dp"
+                android:maxHeight="200dp"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/camara" />
+
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ExpandableListView
+                android:id="@+id/pasos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/añadir_paso"
+                android:divider="@color/white"
+                android:dividerHeight="1dp" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/fondo"
+            android:paddingHorizontal="20dp">
+
+            <TextView
+                android:id="@+id/numero_comentarios"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/comentarios"
+                android:drawablePadding="8dp"
+                android:fontFamily="@font/title_bold"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="21sp"
+                android:maxLines="1"
+                android:layout_marginLeft="20dp"
+                android:layout_centerVertical="true"
+                />
+
+            <com.varunest.sparkbutton.SparkButton
+                android:id="@+id/like"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:sparkbutton_activeImage="@drawable/ic_like"
+                app:sparkbutton_inActiveImage="@drawable/ic_no_like"
+                app:sparkbutton_iconSize="27sp"
+                app:sparkbutton_primaryColor="@color/like"
+                android:layout_centerInParent="true"
+                app:sparkbutton_secondaryColor="@color/like2" />
+
+            <TextView
+                android:id="@+id/numero_likes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/title_bold"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="21sp"
+                android:maxLines="1"
+                android:layout_toRightOf="@id/like"
+                android:layout_marginLeft="-18dp"
+                android:layout_centerVertical="true"
+                />
+
+            <com.varunest.sparkbutton.SparkButton
+                android:id="@+id/archivar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:sparkbutton_activeImage="@drawable/ic_archive_on"
+                app:sparkbutton_inActiveImage="@drawable/ic_archive_off"
+                app:sparkbutton_iconSize="27sp"
+                app:sparkbutton_primaryColor="@color/blue_normal"
+                android:layout_alignParentEnd="true"
+                app:sparkbutton_secondaryColor="@color/blue_light" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/vista_escribir_comentario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/borde_blanco_comentario"
+            android:padding="20dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/foto_perfil_escribir"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/user"
+                app:civ_border_width="2dp"
+                app:civ_border_color="@color/white"/>
+
+            <EditText
+                android:id="@+id/escribir_comentario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/white"
+                android:hint="Escribe un comentario..."
+                android:fontFamily="@font/text_regular"
+                android:textColorHint="@color/colorAccent"
+                android:layout_toRightOf="@id/foto_perfil_escribir"
+                android:padding="10dp"
+                android:background="@drawable/login_register_edittext"
+                android:inputType="textMultiLine"
+                android:lines="3"
+                android:gravity="left|top"/>
+
+            <Button
+                android:id="@+id/enviar"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Enviar"
+                android:layout_below="@id/escribir_comentario"
+                android:layout_marginTop="20dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/button"
+                android:textColor="#fff"
+                android:fontFamily="@font/title_bold" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/no_comments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/white"
+            android:fontFamily="@font/title_bold"
+            android:textSize="18sp"
+            android:padding="20dp"
+            android:text="No hay comentarios aun"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/lista_comentario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:scrollbars="vertical"
+            android:layoutAnimation="@anim/layout_animation"/>
+    </LinearLayout>
+
+</ScrollView>

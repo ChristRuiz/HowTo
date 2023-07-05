@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CrearHowTo">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppThemeInside.AppBarOverlay"
+        android:background="@color/fondo_oscuro">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_height="?attr/actionBarSize"
+            app:popupTheme="@style/AppThemeInside.PopupOverlay" >
+
+            <Button
+                android:id="@+id/crear"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:fontFamily="@font/title_regular"
+                android:background="@drawable/button_social_media"
+                android:layout_gravity="right"
+                android:textSize="19sp"
+                android:textColor="@color/white"
+                android:text="Crear" />
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+
+
+
+</RelativeLayout>

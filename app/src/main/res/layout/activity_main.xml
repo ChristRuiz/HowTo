@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/fondo_login">
+
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="240dp"
+        android:layout_height="92dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:layout_margin="50dp"
+        app:srcCompat="@drawable/logo_cortado_white" />
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="13"
+        android:layout_margin="20dp"
+        android:layout_below="@id/logo"
+        android:textColor="@color/white"
+        android:hint="Correo Electrónico"
+        android:fontFamily="@font/text_regular"
+        android:textColorHint="@color/white"
+        android:layout_centerHorizontal="true"
+        android:drawableLeft="@drawable/ic_email_white_24dp"
+        android:padding="10dp"
+        android:background="@drawable/login_register_edittext"
+        android:drawablePadding="10dp"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="13"
+        android:layout_margin="20dp"
+        android:layout_below="@id/email"
+        android:textColor="@color/white"
+        android:hint="Contraseña"
+        android:fontFamily="@font/text_regular"
+        android:textColorHint="@color/white"
+        android:layout_centerHorizontal="true"
+        android:drawableLeft="@drawable/ic_lock_white_24dp"
+        android:padding="10dp"
+        android:background="@drawable/login_register_edittext"
+        android:drawablePadding="10dp"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Iniciar Sesión"
+        android:layout_margin="20dp"
+        android:layout_below="@id/password"
+        android:background="@drawable/button"
+        android:textColor="#fff"
+        android:fontFamily="@font/title_bold"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/registrarse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¿No tienes cuenta? Registrarse"
+        android:layout_below="@id/login"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/text_regular"
+        android:textColor="@color/white"/>
+
+
+
+    <ImageButton
+        android:id="@+id/google"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_below="@id/registrarse"
+        android:layout_margin="20dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button_social_media"
+        app:srcCompat="@drawable/google"/>
+
+    <ImageButton
+        android:id="@+id/twitter"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_below="@id/registrarse"
+        android:layout_margin="20dp"
+        android:layout_toRightOf="@id/google"
+        android:background="@drawable/button_social_media"
+        app:srcCompat="@drawable/twitter" />
+
+    <ImageButton
+        android:id="@+id/facebook"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_below="@id/registrarse"
+        android:layout_margin="20dp"
+        android:layout_toLeftOf="@id/google"
+        android:background="@drawable/button_social_media"
+        app:srcCompat="@drawable/facebook" />
+
+
+</RelativeLayout>

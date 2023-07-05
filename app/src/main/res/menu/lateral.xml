@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:id="@+id/uno">
+        <item
+            android:id="@+id/inicio"
+            android:title="Inicio"
+            android:icon="@drawable/ic_home_white_24dp"/>
+    </group>
+    <group android:id="@+id/dos">
+        <item
+            android:id="@+id/perfil"
+            android:title="Perfil"
+            android:icon="@drawable/ic_person_white_24dp"/>
+    </group>
+    <group android:id="@+id/tres">
+        <item
+            android:id="@+id/archivados"
+            android:title="Archivados"
+            android:icon="@drawable/ic_archive_white_24dp"/>
+    </group>
+
+</menu>

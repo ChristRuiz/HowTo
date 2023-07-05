@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/borde_blanco_listado_v3"
+    android:paddingTop="16dp"
+    android:paddingHorizontal="16dp"
+    android:paddingBottom="16dp">
+
+    <TextView
+        android:id="@+id/archivado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/title_bold"
+        android:text="HowTo Archivado"
+        android:textColor="@color/colorAccent" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/foto_perfil"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/user"
+        android:layout_below="@id/archivado"
+        app:civ_border_width="2dp"
+        app:civ_border_color="@color/white"/>
+
+    <TextView
+        android:id="@+id/nombre_completo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="2dp"
+        android:layout_below="@id/archivado"
+        android:layout_toRightOf="@id/foto_perfil"
+        android:fontFamily="@font/title_regular"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/nombre_usuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nombre_completo"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="3dp"
+        android:layout_toRightOf="@id/foto_perfil"
+        android:fontFamily="@font/title_regular"
+        android:textColor="@color/colorAccent" />
+
+    <TextView
+        android:id="@+id/titulo_howto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/foto_perfil"
+        android:layout_marginTop="7dp"
+        android:fontFamily="@font/title_bold"
+        android:textSize="17sp"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/descripcion_howto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titulo_howto"
+        android:layout_marginTop="7dp"
+        android:fontFamily="@font/title_regular"
+        android:textSize="15sp"
+        android:textColor="@color/colorAccent" />
+
+    <ImageView
+        android:id="@+id/foto_howto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/descripcion_howto"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:adjustViewBounds="true"
+        android:maxWidth="250dp"
+        android:maxHeight="200dp"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/camara" />
+
+    <RelativeLayout
+        android:id="@+id/botones"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/foto_howto"
+        android:paddingHorizontal="20dp">
+
+        <TextView
+            android:id="@+id/numero_comentarios"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/comentarios"
+            android:drawablePadding="8dp"
+            android:fontFamily="@font/title_bold"
+            android:text="0"
+            android:textColor="@color/white"
+            android:textSize="21sp"
+            android:maxLines="1"
+            android:layout_marginLeft="20dp"
+            android:layout_centerVertical="true"
+            />
+
+        <com.varunest.sparkbutton.SparkButton
+            android:id="@+id/like"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:sparkbutton_activeImage="@drawable/ic_like"
+            app:sparkbutton_inActiveImage="@drawable/ic_no_like"
+            app:sparkbutton_iconSize="27sp"
+            app:sparkbutton_primaryColor="@color/like"
+            android:layout_centerInParent="true"
+            app:sparkbutton_secondaryColor="@color/like2" />
+
+        <TextView
+            android:id="@+id/numero_likes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/title_bold"
+            android:text="0"
+            android:textColor="@color/white"
+            android:textSize="21sp"
+            android:maxLines="1"
+            android:layout_toRightOf="@id/like"
+            android:layout_marginLeft="-18dp"
+            android:layout_centerVertical="true"
+            />
+
+        <com.varunest.sparkbutton.SparkButton
+            android:id="@+id/archivar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:sparkbutton_activeImage="@drawable/ic_archive_on"
+            app:sparkbutton_inActiveImage="@drawable/ic_archive_off"
+            app:sparkbutton_iconSize="27sp"
+            app:sparkbutton_primaryColor="@color/blue_normal"
+            android:layout_alignParentEnd="true"
+            app:sparkbutton_secondaryColor="@color/blue_light" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/fecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/botones"
+        android:fontFamily="@font/title_bold"
+        android:textColor="@color/colorAccent"/>
+
+</RelativeLayout>

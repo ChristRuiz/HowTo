@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondo"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MostrarComentario">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/fondo_oscuro"
+            android:theme="@style/AppThemeInside.AppBarOverlay">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:popupTheme="@style/AppThemeInside.PopupOverlay" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <RelativeLayout
+            android:id="@+id/vista"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp"
+            android:background="@color/comentario_padre"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            tools:showIn="@layout/barra_crear_howto">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/foto_perfil"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/user"
+
+                app:civ_border_color="@color/white"
+                app:civ_border_width="2dp" />
+
+            <TextView
+                android:id="@+id/nombre_completo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="2dp"
+                android:layout_toRightOf="@id/foto_perfil"
+                android:fontFamily="@font/title_regular"
+                android:text=".nombre_usuario"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/nombre_usuario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/nombre_completo"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="3dp"
+                android:layout_toRightOf="@id/foto_perfil"
+                android:fontFamily="@font/title_regular"
+                android:text=".@usuario"
+                android:textColor="@color/colorAccent" />
+
+            <TextView
+                android:id="@+id/comentario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/foto_perfil"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/title_bold"
+                android:text="El comentario"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/comentario_padre"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/numero_respuestas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_chat_white_24dp"
+                android:drawablePadding="8dp"
+                android:gravity="center_vertical"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/title_bold"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:maxLines="1"
+                android:layout_marginLeft="20dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/vista_escribir_comentario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/borde_blanco_comentario"
+            android:padding="20dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/foto_perfil_escribir"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/user"
+                app:civ_border_width="2dp"
+                app:civ_border_color="@color/white"/>
+
+            <EditText
+                android:id="@+id/escribir_respuesta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/white"
+                android:hint="Escribe una respuesta..."
+                android:fontFamily="@font/text_regular"
+                android:textColorHint="@color/colorAccent"
+                android:layout_toRightOf="@id/foto_perfil_escribir"
+                android:padding="10dp"
+                android:background="@drawable/login_register_edittext"
+                android:inputType="textMultiLine"
+                android:lines="3"
+                android:gravity="left|top"/>
+
+            <Button
+                android:id="@+id/enviar"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Enviar"
+                android:layout_below="@id/escribir_respuesta"
+                android:layout_marginTop="20dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/button"
+                android:textColor="#fff"
+                android:fontFamily="@font/title_bold" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/no_respuestas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:fontFamily="@font/title_bold"
+            android:textSize="18sp"
+            android:padding="20dp"
+            android:text="No hay respuestas aun"
+            android:background="@drawable/borde_blanco_listado_comentario"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/lista_respuestas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:scrollbars="vertical"
+            android:layoutAnimation="@anim/layout_animation"/>
+
+    </LinearLayout>
+
+</ScrollView>

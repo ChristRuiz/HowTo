@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">HowTo</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="open">Abrir</string>
+    <string name="close">Cerrar</string>
+    <string name="facebook_app_id">1060579701008157</string>
+    <string name="fb_login_protocol_scheme">fb1060579701008157</string>
+    <string name="title_activity_crear_how_to">HowTo</string>
+</resources>

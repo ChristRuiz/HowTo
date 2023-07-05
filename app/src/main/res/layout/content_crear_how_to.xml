@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".CrearHowTo"
+    android:background="@color/fondo">
+
+    <RelativeLayout
+        android:id="@+id/vista"
+        tools:showIn="@layout/barra_crear_howto"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/barra"
+            layout="@layout/barra_crear_howto" />
+
+        <TextView
+            android:id="@+id/lbl_titulo_howto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/barra"
+            android:layout_margin="20dp"
+            android:fontFamily="@font/text_regular"
+            android:textColor="@color/white"
+            android:layout_marginLeft="35dp"
+            android:text="Titulo del HowTo" />
+
+        <EditText
+            android:id="@+id/titulo_howto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="18"
+            android:layout_marginTop="6dp"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/white"
+            android:hint="Introduce un titulo a tu HowTo"
+            android:fontFamily="@font/text_regular"
+            android:textColorHint="@color/colorAccent"
+            android:layout_below="@id/lbl_titulo_howto"
+            android:padding="10dp"
+            android:background="@drawable/login_register_edittext"
+            android:inputType="text"
+            android:maxLines="1"/>
+
+        <TextView
+            android:id="@+id/contador_titulo_howto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0/45"
+            android:layout_below="@id/titulo_howto"
+            android:textColor="@color/colorAccent"
+            android:layout_alignParentRight="true"
+            android:fontFamily="@font/title_bold"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="30dp"/>
+
+        <TextView
+            android:id="@+id/lbl_descripcion_howto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/contador_titulo_howto"
+            android:fontFamily="@font/text_regular"
+            android:textColor="@color/white"
+            android:layout_marginLeft="35dp"
+            android:text="Descripcion del HowTo" />
+
+        <EditText
+            android:id="@+id/descripcion_howto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="18"
+            android:layout_marginTop="6dp"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/white"
+            android:hint="Introduce una descripcion a tu HowTo"
+            android:fontFamily="@font/text_regular"
+            android:textColorHint="@color/colorAccent"
+            android:layout_below="@id/lbl_descripcion_howto"
+            android:padding="10dp"
+            android:background="@drawable/login_register_edittext"
+            android:inputType="textMultiLine"
+            android:lines="6"
+            android:gravity="left|top"/>
+
+        <TextView
+            android:id="@+id/contador_descripcion_howto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0/200"
+            android:layout_below="@id/descripcion_howto"
+            android:textColor="@color/colorAccent"
+            android:fontFamily="@font/title_bold"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="30dp"/>
+
+        <ImageView
+            android:id="@+id/foto_howto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/contador_descripcion_howto"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:adjustViewBounds="true"
+            android:maxWidth="250dp"
+            android:maxHeight="250dp"
+            android:scaleType="centerCrop"
+            android:padding="1dp"
+            android:background="@color/white"
+            app:srcCompat="@drawable/camara"/>
+
+        <TextView
+            android:id="@+id/añadir_paso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+ AÑADIR NUEVO PASO"
+            android:layout_below="@id/foto_howto"
+            android:fontFamily="@font/title_bold"
+            android:textColor="@color/white"
+            android:layout_margin="25dp"
+            android:layout_centerHorizontal="true"
+            android:textSize="24sp"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/añadir_paso">
+
+            <ExpandableListView
+                android:id="@+id/pasos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@color/white"
+                android:dividerHeight="1dp"
+                android:layout_below="@id/añadir_paso"/>
+        </LinearLayout>
+
+
+
+
+    </RelativeLayout>
+
+
+
+</ScrollView>

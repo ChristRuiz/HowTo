@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/borde_blanco_listado_v3"
+    android:padding="20dp">
+
+    <ImageView
+        android:id="@+id/tipo_notificacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_like"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/foto_perfil"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/user"
+        app:civ_border_width="2dp"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/tipo_notificacion"
+        app:civ_border_color="@color/white"/>
+
+    <TextView
+        android:id="@+id/nombre_completo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="2dp"
+        android:layout_toRightOf="@id/tipo_notificacion"
+        android:layout_below="@id/foto_perfil"
+        android:fontFamily="@font/title_regular"
+        android:text=".nombre_usuario"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/texto_notificacion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="Notificacion"
+        android:fontFamily="@font/text_regular"
+        android:layout_below="@id/nombre_completo"
+        android:layout_toRightOf="@id/tipo_notificacion"
+        android:padding="10dp"/>
+
+</RelativeLayout>

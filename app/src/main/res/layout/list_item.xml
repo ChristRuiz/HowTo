@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:background="@color/fondo">
+
+    <ImageView
+        android:id="@+id/foto_paso"
+        android:layout_width="250dp"
+        android:layout_height="175dp"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:adjustViewBounds="true"
+        android:maxWidth="250dp"
+        android:maxHeight="250dp"
+        android:layout_below="@id/titulo_paso"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/camara"/>
+
+    <TextView
+        android:id="@+id/titulo_paso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/title_bold"
+        android:textColor="@color/white"
+        android:layout_marginLeft="35dp"
+        android:textSize="18sp"
+        android:textDirection="inherit"
+        android:text="Nombre del Paso"/>
+
+    <TextView
+        android:id="@+id/descripcion_paso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/foto_paso"
+        android:fontFamily="@font/text_regular"
+        android:textColor="@color/white"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="30dp"
+        android:textSize="15sp"
+        android:text="Comentario del paso" />
+
+</RelativeLayout>

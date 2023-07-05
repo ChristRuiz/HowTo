@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".CrearPaso"
+    android:background="@color/fondo">
+
+    <RelativeLayout
+        android:id="@+id/relative"
+        tools:showIn="@layout/barra_crear_howto"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/barra"
+            layout="@layout/barra_crear_paso" />
+
+        <TextView
+            android:id="@+id/lbl_titulo_paso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/text_regular"
+            android:layout_below="@id/barra"
+            android:layout_marginTop="25dp"
+            android:textColor="@color/white"
+            android:layout_marginLeft="35dp"
+            android:text="Nombre del Paso" />
+
+        <EditText
+            android:id="@+id/titulo_paso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="18"
+            android:layout_marginTop="6dp"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/white"
+            android:hint="Introduce un nombre al paso"
+            android:fontFamily="@font/text_regular"
+            android:textColorHint="@color/colorAccent"
+            android:layout_below="@id/lbl_titulo_paso"
+            android:padding="10dp"
+            android:background="@drawable/login_register_edittext"
+            android:inputType="text"
+            android:maxLines="1"/>
+
+        <TextView
+            android:id="@+id/contador_titulo_paso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0/50"
+            android:layout_below="@id/titulo_paso"
+            android:textColor="@color/colorAccent"
+            android:layout_alignParentRight="true"
+            android:fontFamily="@font/title_bold"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="30dp"/>
+
+        <TextView
+            android:id="@+id/lbl_descripcion_paso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/contador_titulo_paso"
+            android:fontFamily="@font/text_regular"
+            android:textColor="@color/white"
+            android:layout_marginLeft="35dp"
+            android:text="Comentario del paso" />
+
+        <EditText
+            android:id="@+id/descripcion_paso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="18"
+            android:layout_marginTop="6dp"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/white"
+            android:hint="Escribe el paso a seguir"
+            android:fontFamily="@font/text_regular"
+            android:textColorHint="@color/colorAccent"
+            android:layout_below="@id/lbl_descripcion_paso"
+            android:padding="10dp"
+            android:background="@drawable/login_register_edittext"
+            android:inputType="textMultiLine"
+            android:lines="6"
+            android:gravity="left|top"/>
+
+        <TextView
+            android:id="@+id/contador_descripcion_paso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0/750"
+            android:layout_below="@id/descripcion_paso"
+            android:textColor="@color/colorAccent"
+            android:fontFamily="@font/title_bold"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="30dp"/>
+
+        <ImageView
+            android:id="@+id/foto_paso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/contador_descripcion_paso"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:adjustViewBounds="true"
+            android:maxWidth="250dp"
+            android:maxHeight="250dp"
+            android:scaleType="centerCrop"
+            android:padding="1dp"
+            android:background="@color/white"
+            app:srcCompat="@drawable/camara"/>
+
+    </RelativeLayout>
+</ScrollView>
